@@ -10,7 +10,7 @@
         <TextBox Text="TextBox" TextWrapping="Wrap" Height="40" VerticalAlignment="Bottom" Margin="0,0,242,0"/>
         <Button Content="Button" Margin="0,0,190,0" RenderTransformOrigin="0.144,-0.166" HorizontalAlignment="Right" Width="52" Height="40" VerticalAlignment="Bottom"/>
         <ListBox Margin="0,0,190,40" Name="Messages" DisplayMemberPath="MessageView"/>
-        <ListBox Margin="615,0,0,0" Name="Users"  DisplayMemberPath="UserName"/>
+        <ListBox Margin="615,0,0,0" Name="Rooms"/>
 
     </Grid>
 </Window>

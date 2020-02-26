@@ -22,10 +22,10 @@ namespace Sep.BL.Repositories
 
     public interface IMessageRepository : IRepostiory<Message, long>
     {
-
+        IList<Message> GetMessages(long roomId);
     }
     public interface IRoomRepository : IRepostiory<Room, long>
     {
-
+        IList<Room> GetRooms(long userId);
     }
 }

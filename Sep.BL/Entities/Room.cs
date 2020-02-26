@@ -9,5 +9,7 @@ namespace Sep.BL.Entities
         public long Id { get; set; }
         public IList<User> Users { get; set; }
         public IList<Message> Messages { get; set; }
+
+        public string Name { get; set; }
     }
 }

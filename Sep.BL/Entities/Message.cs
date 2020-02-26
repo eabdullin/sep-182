@@ -10,5 +10,4 @@ namespace Sep.BL.Entities
         public string Text { get; set; }
         public User From { get; set; }
     }
-
 }

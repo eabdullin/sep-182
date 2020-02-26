@@ -1,5 +1,6 @@
 ﻿using Sep.BL.DTOs;
 using Sep.BL.Entities;
+using Sep.BL.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,15 +23,18 @@ namespace Sep
     /// </summary>
     public partial class MainWindow : Window
     {
+        private long _currentUserId;
+        private IRepositoryFactory _repositoryFactory;
         public MainWindow()
         {
             InitializeComponent();
-            Messages.Items.Add(new MessageDto()
-            {
-                UserName = "Yelaman",
-                CreatedDate = DateTime.Now,
-                MessageText = "Hello!"
-            });
+
+            var roomRepository = _repositoryFactory.GetRooms();
+            var rooms = roomRepository
+                .GetRooms(_currentUserId)
+                .Select( x=> x.Name);
+
+            Rooms.ItemsSource = rooms;
         }
     }
 }
